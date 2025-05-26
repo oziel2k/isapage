@@ -1,3 +1,42 @@
+:root {
+
+  --branco: #ffffff;  
+
+  --cinza-azulado-escuro: #4a6c8e;
+  --cinza-azulado-claro: #cadcde;
+
+  --lilas-suave: #e8ccf6;
+  --lilas-suave-forte: #8e44ad; /* roxo marcante */
+
+  --rosa-pessego-suave: #fbd6cb;
+  --rosa-pessego-forte: #d96b52; /* tom terroso-rosado forte */
+
+  --amarelo-claro-pastel: #ffebc4;
+  --amarelo-pastel-forte: #f4a300; /* amarelo ouro */
+
+  --verde-claro-pastel: #d8ebcc;
+  --verde-pastel-forte: #2f855a; /* verde floresta */
+
+  --azul-celeste-claro: #c2ebef;
+  --azul-celeste-forte: #1d3557; /* azul petróleo */
+
+  --lilas-claro: #dad2f1;
+  --lilas-claro-forte: #6a1b9a; /* roxo profundo */
+
+  --rosa-clarinho: #fce4e5;
+  --rosa-clarinho-forte: #c2185b; /* rosa escuro */
+
+  --amarelo-clarissimo: #ffefd1;
+  --amarelo-clarissimo-forte: #f6b800; /* amarelo solar intenso */
+
+  --verde-pastel-bem-claro: #d5f1d7;
+  --verde-pastel-forte: #228b22; /* verde vibrante/folha */
+
+  --isa-oficial: #9ad2d3;
+  --isa-oficial-forte: #257a7b; /* azul esverdeado profundo */
+}
+
+
 /* Reset básico */
 * {
   margin: 0;
