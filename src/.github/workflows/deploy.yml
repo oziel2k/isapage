@@ -1,0 +1,57 @@
+# deploy.yml
+name: Deploy to GitHub Pages
+
+# Roda este fluxo a cada push na branch 'main'
+on:
+  push:
+    branches: [ main ]
+  # Permite rodar manualmente pela aba Actions no GitHub
+  workflow_dispatch:
+
+# Define as permissões para o token do GitHub Actions
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Define que jobs concorrentes podem ser cancelados
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Baixa o código do seu repositório
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Configura o Node.js para instalar dependências e fazer o build
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 3. Instala as dependências do projeto
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Gera a versão final do site (cria a pasta 'dist')
+      - name: Build
+        run: npm run build
+
+      # 5. Prepara o ambiente para a publicação
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 6. Sobe os arquivos da pasta 'dist' para o GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      # 7. Publica o site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
