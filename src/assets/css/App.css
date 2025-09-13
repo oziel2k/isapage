@@ -135,7 +135,7 @@ button:focus-visible {
 
 .container p {
   font-size: 1.2em;
-  color: #999;
+  color: var(--lilas-suave-forte);
 }
 
 .logo {
@@ -196,7 +196,7 @@ button:focus-visible {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   color: var(--cinza-azulado-escuro);
 }
