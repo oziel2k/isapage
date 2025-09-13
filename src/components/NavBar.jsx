@@ -14,7 +14,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="container nav-container">
         <a href="/" className="logo">
-          <img src="/img/isa.jpg" alt="Logo Santo Animal" />
+          <img src={`${import.meta.env.BASE_URL}img/isa.jpg`} alt="Logo Santo Animal" />
         </a>
         <input type="checkbox" id="menu-toggle" />
         <label htmlFor="menu-toggle" className="menu-icon">&#9776;</label>
